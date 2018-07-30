@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Ohm Law APP">
+		<meta name="author" content="Khaled Fathi">
+		<meta name="email" content="khaledfathi@protonmail.com">
+		<link rel="license" href="license/license.txt">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="shortcut icon" href="" type="icon">
+		<style></style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="page_title">
+					<h1>Ohm Law APP</h1>
+					<p>Calculate and get Resistance , Voltage , Current and power </p>
+				</div>
+				<div class="title_image"></div>
+			</div>
+		</header>
+		<article>
+			<section class="container">
+				<div class="app_container">
+					<div class="selection">
+						<label>Get </label>
+						<select id="get_select">
+							<option selected hidden></option><option>Resistance</option>
+							<option>Voltage</option>
+							<option>Current</option>
+							<option>Power</option>
+						</select>
+						<label>Calculte by </label>
+						<select id="type_select">
+						</select>
+					</div>
+					<div class="app_body">
+						<label id="input_a_label" place >- - - - - -</label>
+						<input id="input_a" type="text" disabled>
+						<label id="input_b_label">- - - - - -</label>
+						<input id="input_b" type="text" disabled>
+					</div>
+					<div class="result">
+						<p id="res">Result = .... </p>
+					</div>
+				</div>
+			</section>
+		</article>
+		<footer>
+		</footer>
+		<!--JavaScript Files-->
+		<script src="js/ohm_law_class.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
