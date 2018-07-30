@@ -6,7 +6,7 @@ Made for : Practice
 programer Level : Beginner
 PGP Fingerprint : FC8C B81A 70AE 4998 EB62  6F1A 202C 2C62 E64C 0367
 LICENSE : GPL V3.0
-Github repositorie: ??
+Github repositorie: https://github.com/khaledfathi/Ohm_Law
 */
 /********************************************/
 
