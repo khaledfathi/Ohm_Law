@@ -6,7 +6,7 @@ Made for : Practice
 programer Level : Beginner
 PGP Fingerprint : FC8C B81A 70AE 4998 EB62  6F1A 202C 2C62 E64C 0367
 LICENSE : GPL V3.0
-Github repositorie: https://github.com/khaledfathi/Ohm_Law
+Github repositorie:https://github.com/khaledfathi/Ohm_Law
 */
 /********************************************/
 
@@ -21,15 +21,21 @@ var get_select = document.getElementById("get_select"),
 	input_a_label = document.getElementById("input_a_label"),
 	input_b_label = document.getElementById("input_b_label"),
 	//result
-	res = document.getElementById("res");
+	res = document.getElementById("res"),
+	//electronic logo image
+	electronic_log = document.getElementById("electronic_logo")
 /********************************************/
 
 //create element and its text node and set the place where it will be in 
-function create_element(element_type,text_node,put_in){
+function create_element(element_type,text_node,put_in,hidden_and_selected){
 	var el = document.createElement(element_type),
 		txt= document.createTextNode(text_node);
 		el.appendChild(txt);
 		put_in.appendChild(el);
+	if (hidden_and_selected == 1){
+		el.setAttribute("hidden","");
+		el.setAttribute("selected","");
+	}
 }
 /********************************************/	
 
@@ -138,34 +144,38 @@ get_select.onchange = function (){
 	switch (get_select.value){
 		case "Resistance":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Voltage And Current",type_select);
 			create_element("option","Voltage And Power",type_select);
 			create_element("option","Power And Current",type_select);
+			electronic_log.setAttribute("src","images/ohm_logo.png");
 			clear();
 			break;
 		case "Voltage":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Resistance And Current",type_select);
 			create_element("option","Power And Current",type_select);
 			create_element("option","Power And Resistance",type_select);
+			electronic_log.setAttribute("src","images/volt_logo.png");
 			clear();
 			break;
 		case "Current":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Voltage And Resistance",type_select);
 			create_element("option","Power And Voltage",type_select);
 			create_element("option","Power And Resistance",type_select);
+			electronic_log.setAttribute("src","images/amp_logo.png");
 			clear();
 			break;
 		case "Power":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Voltage And Current",type_select);
 			create_element("option","Resistance And Current",type_select);
 			create_element("option","Voltage And Resistance",type_select);
+			electronic_log.setAttribute("src","images/power_logo.png")
 			clear();
 			break;
 	}
