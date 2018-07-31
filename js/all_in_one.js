@@ -131,11 +131,15 @@ var get_select = document.getElementById("get_select"),
 /********************************************/
 
 //create element and its text node and set the place where it will be in 
-function create_element(element_type,text_node,put_in){
+function create_element(element_type,text_node,put_in,hidden_and_selected){
 	var el = document.createElement(element_type),
 		txt= document.createTextNode(text_node);
 		el.appendChild(txt);
 		put_in.appendChild(el);
+	if (hidden_and_selected == 1){
+		el.setAttribute("hidden","");
+		el.setAttribute("selected","");
+	}
 }
 /********************************************/	
 
@@ -244,7 +248,7 @@ get_select.onchange = function (){
 	switch (get_select.value){
 		case "Resistance":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Voltage And Current",type_select);
 			create_element("option","Voltage And Power",type_select);
 			create_element("option","Power And Current",type_select);
@@ -253,7 +257,7 @@ get_select.onchange = function (){
 			break;
 		case "Voltage":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Resistance And Current",type_select);
 			create_element("option","Power And Current",type_select);
 			create_element("option","Power And Resistance",type_select);
@@ -262,7 +266,7 @@ get_select.onchange = function (){
 			break;
 		case "Current":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Voltage And Resistance",type_select);
 			create_element("option","Power And Voltage",type_select);
 			create_element("option","Power And Resistance",type_select);
@@ -271,7 +275,7 @@ get_select.onchange = function (){
 			break;
 		case "Power":
 			type_select.innerHTML="";
-			create_element("option","",type_select);
+			create_element("option","",type_select,1);
 			create_element("option","Voltage And Current",type_select);
 			create_element("option","Resistance And Current",type_select);
 			create_element("option","Voltage And Resistance",type_select);
