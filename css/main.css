@@ -12,8 +12,19 @@ body{
 /*start header*/
 header{
 	background-color:#8fb0ff;
+	background-size: cover;
 	box-shadow:0px 5px 10px white;
 	padding:1px;
+}
+header .image1{
+	position :absolute;
+	top:-5px;
+	left:450px;
+}
+header .image2{
+	position :absolute;
+	top:-5px;
+	left:795px;
 }
 .page_title{
 	text-align:center;
@@ -108,6 +119,32 @@ article .container{
 	position:absolute;
 	top:95px;
 	left:110px;
+}
+/*artcile >> information container*/
+.information_container{
+	width:1100px;
+	margin:40px auto ;	
+}
+.information_container h2{
+	color:#669;
+	text-shadow : 1px 3px 5px white;
+	text-align:center;
+	font-size:30px;
+	text-decoration:underline;
+}
+.information_container img{
+	
+	margin-left:250px;
+}
+/*artcile >> links*/
+.links{
+	background-color:#8fb0ff;
+	background-size: cover;
+	box-shadow:0px 5px 10px white;
+	padding:1px;
+	padding:10px;
+	text-align:center;
+	text-shadow:1px 2px 2px white;
 }
 /*end article*/
 /**********************************/
