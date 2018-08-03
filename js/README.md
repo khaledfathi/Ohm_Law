@@ -4,3 +4,6 @@
 **is contain the all other files code**
 
 ### ||| it's used as a one JS file to upload to web host |||
+***
+
+>Pure Java Script , there's no Jquery .
